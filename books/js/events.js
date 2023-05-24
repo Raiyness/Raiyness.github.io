@@ -8,6 +8,16 @@ HTMLElement.prototype.wrap = function(wrapper) {
 
 Fluid.events = {
 
+  searchByTag: function() {
+    document.querySelectorAll('#books-tags button.tag').forEach(function(tag) {
+      tag.addEventListener('click', function(event) {
+        var tagName = this.getAttribute('data-name'); // 获取被点击的标签的名称
+        var searchBox = document.querySelector('#search-input'); // 获取搜索框元素
+        searchBox.value = tagName; // 将搜索框的值设置为标签的名称
+      });
+    });
+  },
+
   searchBooks: function() {
     $('#search-input').on('input', function() {
       var searchVal = $(this).val().toLowerCase(); //获取搜索框中的字符

@@ -1378,6 +1378,20 @@ i.iconfont {
   box-shadow: 0 0 0 3px rgba(29,51,87,0.5);
   border-color: #214469;
 }
+.books-tag-container {
+  margin-bottom: 1rem;
+}
+.tag-item {
+  display: inline-block;
+  margin-right: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  background-color: #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.tag-item:hover {
+  background-color: #aaa;
+}
 #valine.v[data-class=v] .status-bar,
 #valine.v[data-class=v] .veditor,
 #valine.v[data-class=v] .vinput,
