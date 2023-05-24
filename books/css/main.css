@@ -1278,6 +1278,7 @@ i.iconfont {
 .grid-container .index-card {
   flex: 1 0 50%;
   margin-bottom: 2.5rem;
+  max-width: 50%;
 }
 .index-img img {
   display: block;
