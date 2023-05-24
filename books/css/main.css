@@ -1273,6 +1273,7 @@ i.iconfont {
 .grid-container {
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-start;
 }
 .grid-container .index-card {
   flex: 1 0 50%;
