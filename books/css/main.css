@@ -1275,10 +1275,10 @@ i.iconfont {
   flex-wrap: wrap;
   justify-content: flex-start;
 }
-.grid-container .index-card {
+.index-card {
   flex: 1 0 50%;
-  margin-bottom: 2.5rem;
   max-width: 50%;
+  margin-bottom: 2.5rem;
 }
 .index-img img {
   display: block;
