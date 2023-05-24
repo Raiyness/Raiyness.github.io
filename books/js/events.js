@@ -8,21 +8,30 @@ HTMLElement.prototype.wrap = function(wrapper) {
 
 Fluid.events = {
 
-  searchBooks: function(){
-    // var searchInput = document.getElementById('search-input');
-    // var cards = document.getElementsByClassName('index-card');
+  searchBooks: function() {
+    $('#search-input').on('input', function() {
+      var searchVal = $(this).val().toLowerCase(); //获取搜索框中的字符
+      var allHidden = true; //标记是否所有卡片都被隐藏
 
-    // searchInput.addEventListener('input', function () {
-    //   var searchTerm = searchInput.value.trim().toLowerCase();
+      $('.index-card').each(function() {
+        var headerText = $(this).find('.index-header a').text().toLowerCase(); //获取卡片的 header 链接的文字
 
-    //   Array.from(cards).forEach(function (card) {
-    //     var title = card.querySelector('.index-header a').innerText.toLowerCase();
-    //     console.info("title = " + title);
-    //     var shouldDisplay = searchTerm === '' || title.includes(searchTerm);
+        // 如果卡片的 header 链接的文字中包含搜索框中的字符，显示该卡片，否则隐藏
+        if (headerText.includes(searchVal)) {
+          $(this).show();
+          allHidden = false; //至少有一个卡片被显示
+        } else {
+          $(this).hide();
+        }
+      });
 
-    //     card.style.display = shouldDisplay ? 'block' : 'none';
-    //   });
-    // });
+      // 如果所有卡片都被隐藏，显示“没有相应结果”，否则隐藏
+      if (allHidden) {
+        $('#no-results').show();
+      } else {
+        $('#no-results').hide();
+      }
+    });
   },
 
 
