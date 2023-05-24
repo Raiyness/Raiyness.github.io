@@ -1353,6 +1353,18 @@ i.iconfont {
     font-size: 1.25rem;
   }
 }
+.search-box {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.search-input {
+  border-radius: 20px;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
 #valine.v[data-class=v] .status-bar,
 #valine.v[data-class=v] .veditor,
 #valine.v[data-class=v] .vinput,
