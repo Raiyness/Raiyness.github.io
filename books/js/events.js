@@ -9,20 +9,20 @@ HTMLElement.prototype.wrap = function(wrapper) {
 Fluid.events = {
 
   searchBooks: function(){
-    var searchInput = document.getElementById('search-input');
-    var cards = document.getElementsByClassName('index-card');
+    // var searchInput = document.getElementById('search-input');
+    // var cards = document.getElementsByClassName('index-card');
 
-    searchInput.addEventListener('input', function () {
-      var searchTerm = searchInput.value.trim().toLowerCase();
+    // searchInput.addEventListener('input', function () {
+    //   var searchTerm = searchInput.value.trim().toLowerCase();
 
-      Array.from(cards).forEach(function (card) {
-        var title = card.querySelector('.index-header a').innerText.toLowerCase();
-        console.info("title = " + title);
-        var shouldDisplay = searchTerm === '' || title.includes(searchTerm);
+    //   Array.from(cards).forEach(function (card) {
+    //     var title = card.querySelector('.index-header a').innerText.toLowerCase();
+    //     console.info("title = " + title);
+    //     var shouldDisplay = searchTerm === '' || title.includes(searchTerm);
 
-        card.style.display = shouldDisplay ? 'block' : 'none';
-      });
-    });
+    //     card.style.display = shouldDisplay ? 'block' : 'none';
+    //   });
+    // });
   },
 
 
