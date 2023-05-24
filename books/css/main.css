@@ -1270,9 +1270,13 @@ i.iconfont {
     transform: translateY(0);
   }
 }
-.index-card {
+.grid-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.grid-container .index-card {
+  flex: 1 0 50%;
   margin-bottom: 2.5rem;
-  display: block;
 }
 .index-img img {
   display: block;
