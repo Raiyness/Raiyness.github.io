@@ -17,6 +17,7 @@ Fluid.events = {
 
       Array.from(cards).forEach(function (card) {
         var title = card.querySelector('.index-header a').innerText.toLowerCase();
+        console.info("title = " + title)
         var shouldDisplay = searchTerm === '' || title.includes(searchTerm);
 
         card.style.display = shouldDisplay ? 'block' : 'none';
