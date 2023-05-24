@@ -10,26 +10,19 @@ Fluid.events = {
 
   searchBooks: function(){
     var searchInput = document.getElementById('search-input');
+    var cards = document.getElementsByClassName('index-card');
 
-    // 绑定 input 事件监听器
     searchInput.addEventListener('input', function () {
-      // 在这里处理搜索事件和更新卡片显示的逻辑
-      var searchTerm = searchInput.value.toLowerCase();
-      filterCards(searchTerm);
-    });
+      var searchTerm = searchInput.value.trim().toLowerCase();
 
-    // 根据搜索词筛选卡片并显示对应内容
-    function filterCards(searchTerm) {
-      var cards = document.getElementsByClassName('index-card');
       Array.from(cards).forEach(function (card) {
         var title = card.querySelector('.index-header a').innerText.toLowerCase();
-        if (title.includes(searchTerm)) {
-          card.style.display = 'block'; // 显示匹配的卡片
-        } else {
-          card.style.display = 'none'; // 隐藏不匹配的卡片
-        }
+        var excerpt = card.querySelector('.index-excerpt div').innerText.toLowerCase();
+        var shouldDisplay = searchTerm === '' || title.includes(searchTerm) || excerpt.includes(searchTerm);
+
+        card.style.display = shouldDisplay ? 'block' : 'none';
       });
-    }
+    });
   },
 
 

@@ -260,11 +260,8 @@
               <div class="col-12 col-md-10 m-auto">
                 
 
-<div class="search-box text-center">
-  <form class="search-form" action="/search" method="get">
-    <input type="text" name="query" placeholder="搜索..." />
-    <button type="submit">搜索</button>
-  </form>
+<div class="text-center">
+  <input type="text" id="search-input" placeholder="搜索..." />
 </div>
 
 
@@ -341,6 +338,7 @@
       </div>
     </article>
   </div>
+  <div id="no-results-message" style="display: none;">没有对应的搜索结果</div>
 
   
 
@@ -384,6 +382,7 @@
       </div>
     </article>
   </div>
+  <div id="no-results-message" style="display: none;">没有对应的搜索结果</div>
 
   
     </div>
