@@ -1361,9 +1361,22 @@ i.iconfont {
   margin-bottom: 1rem;
 }
 #search-input {
-  border-radius: 0.5rem;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  display: block;
+  width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  color: #111;
+  background-color: #fff;
+  border: 1px solid;
+  border-color: #ccc;
+  border-radius: 0.375rem;
+}
+#search-input:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59,130,246,0.5);
+  border-color: #3b82f6;
 }
 #valine.v[data-class=v] .status-bar,
 #valine.v[data-class=v] .veditor,
