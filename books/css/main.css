@@ -1272,6 +1272,7 @@ i.iconfont {
 }
 .index-card {
   margin-bottom: 2.5rem;
+  display: block;
 }
 .index-img img {
   display: block;
@@ -1345,6 +1346,12 @@ i.iconfont {
   .index-header .index-pin {
     font-size: 1.25rem;
   }
+}
+.search-box {
+/* 添加样式以使搜索框在水平方向上居中 */
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 400px; /* 可根据需要调整宽度 */
 }
 #valine.v[data-class=v] .status-bar,
 #valine.v[data-class=v] .veditor,
