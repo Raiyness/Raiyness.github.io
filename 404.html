@@ -240,9 +240,17 @@
                     var subtitleElement = document.getElementById('subtitle');
                     if (document.referrer.includes('/en/')) {
                       subtitleElement.setAttribute('data-typed-text', 'Sorry');
-                      subtitleElement.innerText = 'Sorry';
                     } else {
                       subtitleElement.setAttribute('data-typed-text', '对不起');
+                    }
+                  });
+                </script>
+                <script>
+                  document.addEventListener('DOMContentLoaded', function () {
+                    var subtitleElement = document.getElementById('subtitle');
+                    if (document.referrer.includes('/en/')) {
+                      subtitleElement.innerText = 'Sorry';
+                    } else {
                       subtitleElement.innerText = '对不起';
                     }
                   });
