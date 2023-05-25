@@ -1392,6 +1392,26 @@ i.iconfont {
 .tag-item:hover {
   background-color: #aaa;
 }
+.book-tag {
+  text-transform: capitalize;
+  text-decoration: underline;
+  font-weight: bold;
+  padding: 0.25rem 0.5rem;
+  color: #395e6b;
+  background-color: #f0f4f9;
+  border-radius: 0.25rem;
+}
+.book-tag:hover {
+  text-decoration: underline;
+}
+.books-tags {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #859fa5;
+}
 #valine.v[data-class=v] .status-bar,
 #valine.v[data-class=v] .veditor,
 #valine.v[data-class=v] .vinput,
