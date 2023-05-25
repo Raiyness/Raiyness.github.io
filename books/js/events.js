@@ -18,6 +18,8 @@ Fluid.events = {
         if (tagName === 'all'){
           searchVal.value = ''; // 将搜索框的值设置为 '#' + 标签的名称
           var searchTagsName = '';
+          $(this).show();
+          allHidden = false; 
         } else {
           searchVal.value = '#' + tagName; // 将搜索框的值设置为 '#' + 标签的名称
           var searchTagsName = ('#'+ tagName).toLowerCase();
