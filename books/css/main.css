@@ -1396,20 +1396,21 @@ i.iconfont {
   font-weight: bold;
   padding: 0.25rem 0.5rem;
   color: #395e6b;
-  background-color: #c8cacc;
-  border-radius: 0.25rem;
+  background-color: #f4f4f5;
+  border-radius: 0.4rem;
   border: none;
 }
 .book-tag:hover {
   text-decoration: underline;
 }
 .books-tags {
+  border-radius: 0.5rem;
   margin-top: 0.5rem;
   margin-bottom: 1rem;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  background-color: #e6ebf2;
+  background-color: #f9fafb;
   gap: 0.5rem;
 }
 #valine.v[data-class=v] .status-bar,
