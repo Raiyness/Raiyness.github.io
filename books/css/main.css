@@ -1393,12 +1393,12 @@ i.iconfont {
   background-color: #aaa;
 }
 .book-tag {
-  text-transform: capitalize;
   font-weight: bold;
   padding: 0.25rem 0.5rem;
   color: #395e6b;
-  background-color: #f0f4f9;
+  background-color: #c8cacc;
   border-radius: 0.25rem;
+  border: none;
 }
 .book-tag:hover {
   text-decoration: underline;
