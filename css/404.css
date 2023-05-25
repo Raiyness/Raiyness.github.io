@@ -1,5 +1,5 @@
 .choose-page {
-  margin-top: 30px;
+  margin-top: 27px;
   height: 50px;
   width: 100%;
   display: flex;
@@ -7,13 +7,16 @@
   gap: 60px;
 }
 .custom-404-button {
+  width: 130px;
   font-weight: bold;
-  padding: 0.25rem 0.5rem;
+  padding: 0.25rem 1rem;
   color: #fefefe;
   background-color: #74959c;
   border-radius: 0.4rem;
-  border: none;
+  border: 2px solid;
+  border-color: #000;
 }
 .custom-404-button:hover {
   background-color: #192b39;
+  box-shadow: 0 0 0 3px rgba(29,51,87,0.5);
 }
