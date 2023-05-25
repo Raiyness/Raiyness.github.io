@@ -19,7 +19,7 @@ Fluid.events = {
           var match = false;
           $(this).find('.post-meta a').each(function() {
             var tagName = $(this).text().toLowerCase(); //获取标签名称
-            if (tagName === searchVal) {
+            if (tagName === searchVal.value) {
               match = true;
               return false; // 中断 each 循环
             }
@@ -49,10 +49,24 @@ Fluid.events = {
       var allHidden = true; //标记是否所有卡片都被隐藏
 
       $('.index-card').each(function() {
-        var headerText = $(this).find('.index-header a').text().toLowerCase(); //获取卡片的 header 链接的文字
-
-        // 如果卡片的 header 链接的文字中包含搜索框中的字符，显示该卡片，否则隐藏
-        if (headerText.includes(searchVal)) {
+        var match = false;
+        if (searchVal.startsWith('#')) {
+          // 如果搜索内容以 '#' 开头，从标签中搜索
+          $(this).find('.post-meta a').each(function() {
+            var tagName = $(this).text().toLowerCase(); //获取标签名称
+            if (tagName === searchVal) {
+              match = true;
+              return false; // 中断 each 循环
+            }
+          });
+        } else {
+          // 如果搜索内容不以 '#' 开头，从 index-header 中搜索
+          var headerText = $(this).find('.index-header a').text().toLowerCase(); //获取卡片的 header 链接的文字
+          match = headerText.includes(searchVal);
+        }
+  
+        // 如果匹配成功，显示该卡片，否则隐藏
+        if (match) {
           $(this).show();
           allHidden = false; //至少有一个卡片被显示
         } else {
