@@ -19,7 +19,7 @@
   <meta name="keywords" content="">
   
     <meta property="og:type" content="website">
-<meta property="og:title" content="页面不存在">
+<meta property="og:title" content="抱歉，该页面不存在">
 <meta property="og:url" content="http://raiyness.github.io/404.html">
 <meta property="og:site_name" content="Ray">
 <meta property="og:locale" content="zh_CN">
@@ -28,7 +28,7 @@
   
   
   
-  <title>页面不存在 - Ray</title>
+  <title>抱歉，该页面不存在 - Ray</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -233,7 +233,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="页面不存在"></span>
+            <span id="subtitle" data-typed-text="抱歉，该页面不存在"></span>
           
         </div>
 
@@ -253,14 +253,27 @@
     
       
 
-<script>
-  function redirect() {
-    location.href = "/";
-  }
+<div class="row mx-auto choose-page">
 
-  
-    setTimeout(redirect, 5000)
-  
+  <button id="back-last-page">回到上一页</button>
+  <button id="back-home">回到首页</button>
+</div>
+
+<script>
+  // 获取页面中的两个按钮
+  var backButton = document.getElementById('back-last-page');
+  var homeButton = document.getElementById('back-home');
+
+  // 当点击"回到上一页"按钮时，浏览器后退到上一页
+  backButton.addEventListener('click', function() {
+      window.history.back();
+  });
+
+  // 当点击"回到首页"按钮时，跳转到首页
+  // 这里需要你替换为你的首页URL
+  homeButton.addEventListener('click', function() {
+      window.location.href = 'https://Raiyness.github.io/';
+  });
 </script>
 
     

@@ -19,7 +19,7 @@
   <meta name="keywords" content="">
   
     <meta property="og:type" content="website">
-<meta property="og:title" content="Page not found">
+<meta property="og:title" content="Oops! this page has slipped away...">
 <meta property="og:url" content="http://raiyness.github.io/en/books/404.html">
 <meta property="og:site_name" content="Ray">
 <meta property="og:locale" content="en_US">
@@ -28,7 +28,7 @@
   
   
   
-  <title>Page not found - Ray</title>
+  <title>Oops! this page has slipped away... - Ray</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -108,7 +108,7 @@
 <div class="header-inner" style="height: 85vh;">
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
-    <a class="navbar-brand" href="/en/books/">
+    <a class="navbar-brand" href="https://Raiyness.github.io/en/">
       <strong><em>Ray</em></strong>
     </a>
 
@@ -233,7 +233,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Page not found"></span>
+            <span id="subtitle" data-typed-text="Oops! this page has slipped away..."></span>
           
         </div>
 
@@ -253,14 +253,27 @@
     
       
 
-<script>
-  function redirect() {
-    location.href = "/en/books/";
-  }
+<div class="row mx-auto choose-page">
 
-  
-    setTimeout(redirect, 5000)
-  
+  <button id="back-last-page">�ص���һҳ</button>
+  <button id="back-home">�ص���ҳ</button>
+</div>
+
+<script>
+  // ��ȡҳ���е�������ť
+  var backButton = document.getElementById('back-last-page');
+  var homeButton = document.getElementById('back-home');
+
+  // �����"�ص���һҳ"��ťʱ����������˵���һҳ
+  backButton.addEventListener('click', function() {
+      window.history.back();
+  });
+
+  // �����"�ص���ҳ"��ťʱ����ת����ҳ
+  // ������Ҫ���滻Ϊ�����ҳURL
+  homeButton.addEventListener('click', function() {
+      window.location.href = 'https://Raiyness.github.io/en/';
+  });
 </script>
 
     
