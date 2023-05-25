@@ -8,6 +8,105 @@ HTMLElement.prototype.wrap = function(wrapper) {
 
 Fluid.events = {
 
+  searchAllTag: function() {
+    document.querySelectorAll('.books-tags button.book-tag-all').forEach(function(tag) {
+      tag.addEventListener('click', function(event) {
+        var allHidden = true; //����Ƿ����п�Ƭ��������
+        var tagName = this.getAttribute('data-name'); // ��ȡ������ı�ǩ������
+        var searchVal = document.querySelector('#search-input'); // ��ȡ������Ԫ��
+        searchVal.value = ''; // ���������ֵ����Ϊ '#' + ��ǩ������
+        var searchTagsName = '';
+        $('.index-card').each(function() {
+          $(this).show();
+          allHidden = false; 
+        })
+        // ������п�Ƭ�������أ���ʾ��û����Ӧ���������������
+        if (allHidden) {
+          $('#no-results').show();
+        } else {
+          $('#no-results').hide();
+        }
+      });
+    });
+  },
+
+  searchByTag: function() {
+    document.querySelectorAll('.books-tags button.book-tag').forEach(function(tag) {
+      tag.addEventListener('click', function(event) {
+        var allHidden = true; //����Ƿ����п�Ƭ��������
+        var tagName = this.getAttribute('data-name'); // ��ȡ������ı�ǩ������
+        var searchVal = document.querySelector('#search-input'); // ��ȡ������Ԫ��
+        searchVal.value = '#' + tagName; // ���������ֵ����Ϊ '#' + ��ǩ������
+        var searchTagsName = ('#'+ tagName).toLowerCase();
+        $('.index-card').each(function() {
+          var match = false;
+          $(this).find('.post-meta a').each(function() {
+            var tagName = $(this).text().toLowerCase(); //��ȡ��ǩ����
+            if (tagName === searchTagsName) {
+              match = true;
+              return false; // �ж� each ѭ��
+            }
+          });
+          
+          // ���ƥ��ɹ�����ʾ�ÿ�Ƭ����������
+          if (match) {
+            $(this).show();
+            allHidden = false; //������һ����Ƭ����ʾ
+          } else {
+            $(this).hide();
+          }
+        });
+        // ������п�Ƭ�������أ���ʾ��û����Ӧ���������������
+        if (allHidden) {
+          $('#no-results').show();
+        } else {
+          $('#no-results').hide();
+        }
+      });
+    });
+  },
+
+  searchBooks: function() {
+    $('#search-input').on('input', function() {
+      var searchVal = $(this).val().toLowerCase(); //��ȡ�������е��ַ�
+      var allHidden = true; //����Ƿ����п�Ƭ��������
+
+      $('.index-card').each(function() {
+        var match = false;
+        if (searchVal.startsWith('#')) {
+          // ������������� '#' ��ͷ���ӱ�ǩ������
+          $(this).find('.post-meta a').each(function() {
+            var tagName = $(this).text().toLowerCase(); //��ȡ��ǩ����
+            if (tagName === searchVal) {
+              match = true;
+              return false; // �ж� each ѭ��
+            }
+          });
+        } else {
+          // ����������ݲ��� '#' ��ͷ���� index-header ������
+          var headerText = $(this).find('.index-header a').text().toLowerCase(); //��ȡ��Ƭ�� header ���ӵ�����
+          match = headerText.includes(searchVal);
+        }
+  
+        // ���ƥ��ɹ�����ʾ�ÿ�Ƭ����������
+        if (match) {
+          $(this).show();
+          allHidden = false; //������һ����Ƭ����ʾ
+        } else {
+          $(this).hide();
+        }
+      });
+
+      // ������п�Ƭ�������أ���ʾ��û����Ӧ���������������
+      if (allHidden) {
+        $('#no-results').show();
+      } else {
+        $('#no-results').hide();
+      }
+    });
+  },
+
+
   changeLanguage: function(){
     var currentUrl = window.location.href;
     if (currentUrl.includes("raiyness.github.io/en")) {
