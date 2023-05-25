@@ -1414,6 +1414,17 @@ i.iconfont {
   background-color: #f9fafb;
   gap: 0.5rem;
 }
+.book-tag-all {
+  font-weight: bold;
+  padding: 0.25rem 0.5rem;
+  color: #395e6b;
+  background-color: #f4f4f5;
+  border-radius: 0.4rem;
+  border: none;
+}
+.book-tag-all:hover {
+  text-decoration: underline;
+}
 #valine.v[data-class=v] .status-bar,
 #valine.v[data-class=v] .veditor,
 #valine.v[data-class=v] .vinput,
