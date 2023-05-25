@@ -234,13 +234,13 @@
         <div class="h2">
           
             
+              <i class="fa fa-exclamation-circle"></i>
               <span id="subtitle">
-                <i class="fa fa-exclamation-circle"></i>
                 <script>
                   document.addEventListener('DOMContentLoaded', function () {
                     var subtitleElement = document.getElementById('subtitle');
                     if (window.location.pathname.includes('/en/')) {
-                      subtitleElement.innerText = 'Oops! this page has slipped away...';
+                      subtitleElement.innerText = 'Oops! This page has slipped away...';
                     } else {
                       subtitleElement.innerText = '对不起，该页面不存在';
                     }
@@ -268,8 +268,8 @@
       
 
 <div class="row mx-auto choose-page">
-  <button id="back-last-page"></button>
-  <button id="back-home"></button>
+  <i class="fa fa-chevron-circle-left"></i><button class="custom-404-button" id="back-last-page"></button>
+  <i class="fa fa-home"></i><button class="custom-404-button" id="back-home"></button>
 </div>
 
 <script>
