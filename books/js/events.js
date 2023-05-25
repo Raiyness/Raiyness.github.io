@@ -13,7 +13,7 @@ Fluid.events = {
       tag.addEventListener('click', function(event) {
         var tagName = this.getAttribute('data-name'); // 获取被点击的标签的名称
         var searchVal = document.querySelector('#search-input'); // 获取搜索框元素
-        searchVal.value = '#' + tagName; // 将搜索框的值设置为 '#' + 标签的名称
+        searchVal.value = ('#' + tagName).toLowerCase(); // 将搜索框的值设置为 '#' + 标签的名称
         
         $('.index-card').each(function() {
           var match = false;
