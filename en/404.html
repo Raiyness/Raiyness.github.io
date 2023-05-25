@@ -255,22 +255,18 @@
 
 <div class="row mx-auto choose-page">
 
-  <button id="back-last-page">�ص���һҳ</button>
-  <button id="back-home">�ص���ҳ</button>
+  <button id="back-last-page">back to last</button>
+  <button id="back-home">homepage</button>
 </div>
 
 <script>
-  // ��ȡҳ���е�������ť
   var backButton = document.getElementById('back-last-page');
   var homeButton = document.getElementById('back-home');
 
-  // �����"�ص���һҳ"��ťʱ����������˵���һҳ
   backButton.addEventListener('click', function() {
       window.history.back();
   });
 
-  // �����"�ص���ҳ"��ťʱ����ת����ҳ
-  // ������Ҫ���滻Ϊ�����ҳURL
   homeButton.addEventListener('click', function() {
       window.location.href = 'https://Raiyness.github.io/en/';
   });
