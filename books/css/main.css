@@ -1410,7 +1410,7 @@ i.iconfont {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  background-color: #cfd8e1;
+  background-color: #fff;
   gap: 0.5rem;
 }
 .book-tag-all {
