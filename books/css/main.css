@@ -1394,7 +1394,6 @@ i.iconfont {
 }
 .book-tag {
   text-transform: capitalize;
-  text-decoration: underline;
   font-weight: bold;
   padding: 0.25rem 0.5rem;
   color: #395e6b;
@@ -1410,7 +1409,8 @@ i.iconfont {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  background-color: #859fa5;
+  background-color: #e6ebf2;
+  gap: 0.5rem;
 }
 #valine.v[data-class=v] .status-bar,
 #valine.v[data-class=v] .veditor,

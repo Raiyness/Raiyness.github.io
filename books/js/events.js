@@ -14,12 +14,13 @@ Fluid.events = {
         var tagName = this.getAttribute('data-name'); // 获取被点击的标签的名称
         var searchVal = document.querySelector('#search-input'); // 获取搜索框元素
         searchVal.value = '#' + tagName; // 将搜索框的值设置为 '#' + 标签的名称
+        var searchTagsName = ('#'+ tagName).toLowerCase();
         
         $('.index-card').each(function() {
           var match = false;
           $(this).find('.post-meta a').each(function() {
             var tagName = $(this).text().toLowerCase(); //获取标签名称
-            if (tagName === searchVal.value.toLowerCase()) {
+            if (tagName === searchTagsName) {
               match = true;
               return false; // 中断 each 循环
             }
