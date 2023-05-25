@@ -11,6 +11,7 @@ Fluid.events = {
   searchByTag: function() {
     document.querySelectorAll('.books-tags button.book-tag').forEach(function(tag) {
       tag.addEventListener('click', function(event) {
+        var allHidden = true; //标记是否所有卡片都被隐藏
         var tagName = this.getAttribute('data-name'); // 获取被点击的标签的名称
         var searchVal = document.querySelector('#search-input'); // 获取搜索框元素
 
