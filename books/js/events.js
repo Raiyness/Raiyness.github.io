@@ -15,7 +15,7 @@ Fluid.events = {
         var tagName = this.getAttribute('data-name'); // 获取被点击的标签的名称
         var searchVal = document.querySelector('#search-input'); // 获取搜索框元素
 
-        if (tagName === '#All'){
+        if (tagName === 'all'){
           searchVal.value = ''; // 将搜索框的值设置为 '#' + 标签的名称
           var searchTagsName = '';
         } else {
